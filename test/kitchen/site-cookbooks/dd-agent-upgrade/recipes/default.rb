@@ -18,7 +18,7 @@ if node['dd-agent-upgrade']['add_new_repo']
       key '382E94DE'
       uri node['dd-agent-upgrade']['aptrepo']
       distribution node['dd-agent-upgrade']['aptrepo_dist']
-      components ['main']
+      components ['6']
       action :add
     end
 

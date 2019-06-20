@@ -12,6 +12,8 @@
 
 
 if node['platform_family'] != 'windows'
+  include_recipe 'dd-agent-import-conf::_datadog-agent-6'
+
   execute "import-command" do
     command "sudo -u dd-agent -- /opt/datadog-agent/bin/agent/agent import /etc/dd-agent/ /etc/datadog-agent/"
     action :run

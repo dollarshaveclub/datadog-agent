@@ -10,6 +10,6 @@ if node['dd-agent-step-by-step']['install_candidate']
 else
   default['dd-agent-step-by-step']['repo_domain_apt'] = 'apt.datadoghq.com'
   default['dd-agent-step-by-step']['repo_domain_yum'] = 'yum.datadoghq.com'
-  default['dd-agent-step-by-step']['repo_branch_apt'] = "stable"
-  default['dd-agent-step-by-step']['repo_branch_yum'] = "rpm"
+  default['dd-agent-step-by-step']['repo_branch_apt'] = "stable/6"
+  default['dd-agent-step-by-step']['repo_branch_yum'] = "stable/6"
 end

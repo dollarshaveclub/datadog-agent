@@ -11,7 +11,7 @@ case node['platform_family']
 when 'debian'
   execute 'install debian' do
     command <<-EOF
-      sudo sh -c "echo \'deb http://#{node['dd-agent-step-by-step']['repo_domain_apt']}/ #{node['dd-agent-step-by-step']['repo_branch_apt']} main\' > /etc/apt/sources.list.d/datadog.list"
+      sudo sh -c "echo \'deb http://#{node['dd-agent-step-by-step']['repo_domain_apt']}/ #{node['dd-agent-step-by-step']['repo_branch_apt']} 6\' > /etc/apt/sources.list.d/datadog.list"
       sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 382E94DE
       sudo apt-get update
       sudo apt-get install #{node['dd-agent-step-by-step']['package_name']} -y -q
