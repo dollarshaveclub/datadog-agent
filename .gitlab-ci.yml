@@ -686,8 +686,8 @@ kitchen_windows:
     - ln -s $CI_PROJECT_DIR/kitchen_logs $DD_AGENT_TESTING_DIR/.kitchen
     - export TEST_PLATFORMS="win2012,MicrosoftWindowsServer:WindowsServer:2012-Datacenter:3.127.20181122"
     - export TEST_PLATFORMS="$TEST_PLATFORMS|win2012r2,MicrosoftWindowsServer:WindowsServer:2012-R2-Datacenter:4.127.20181125"
-    - export TEST_PLATFORMS="$TEST_PLATFORMS|win2016,MicrosoftWindowsServer:WindowsServer:2016-Datacenter:2016.127.20181122"
-    - export TEST_PLATFORMS="$TEST_PLATFORMS|win2019,MicrosoftWindowsServer:WindowsServer:2019-Datacenter:2019.0.20181122"
+    - export TEST_PLATFORMS="$TEST_PLATFORMS|win2016,MicrosoftWindowsServer:WindowsServer:2016-Datacenter-Server-Core-smalldisk:2016.127.20190603"
+    - export TEST_PLATFORMS="$TEST_PLATFORMS|win2019,MicrosoftWindowsServer:WindowsServer:2019-Datacenter-Core-smalldisk:2019.0.20190603"
     - bash -l tasks/run-test-kitchen.sh
   artifacts:
     expire_in: 2 weeks
@@ -775,7 +775,7 @@ kitchen_suse:
     - cd $DD_AGENT_TESTING_DIR
     - mkdir $CI_PROJECT_DIR/kitchen_logs
     - ln -s $CI_PROJECT_DIR/kitchen_logs $DD_AGENT_TESTING_DIR/.kitchen
-    - export TEST_PLATFORMS="sles-12,SUSE:SLES:12-SP3:2018.09.04"
+    - export TEST_PLATFORMS="sles-12,SUSE:SLES:12-SP4:2019.06.17"
     - bash -l tasks/run-test-kitchen.sh
   artifacts:
     expire_in: 2 weeks
@@ -797,7 +797,7 @@ kitchen_debian:
     - cd $DD_AGENT_TESTING_DIR
     - mkdir $CI_PROJECT_DIR/kitchen_logs
     - ln -s $CI_PROJECT_DIR/kitchen_logs $DD_AGENT_TESTING_DIR/.kitchen
-    - export TEST_PLATFORMS="debian-8,credativ:Debian:8:8.0.201803130"
+    - export TEST_PLATFORMS="debian-8,credativ:Debian:8:8.20190313.0"
     - bash -l tasks/run-test-kitchen.sh
   artifacts:
     expire_in: 2 weeks
